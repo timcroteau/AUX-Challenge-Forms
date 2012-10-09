@@ -43,15 +43,15 @@
         
         } else {
     ?>
-    <div>
+    <div id="container">
         <header>
             <h1>Sign up for Whoo!</h1>
             <h2>50 projects, 500 images, 10 videos, domain binding, and technical support</h2>
         </header>
-        <div>
+        <section>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="whoo_signup">
                 <fieldset form="whoo_signup">
-                    <legend>First, name your portfolio</legend>
+                    <legend><span class="numbering">1</a> First, name your portfolio</legend>
                     <section>
                         <label for="port_title">Portfolio Title</label>
                         <input type="text" id="port_title" name="port_title" minlength="2"/>
@@ -61,7 +61,7 @@
                     </section>
                 </fieldset>
                 <fieldset form="whoo_signup">
-                    <legend>Now, enter your account details</legend>
+                    <legend><span class="numbering">2</a>Now, enter your account details</legend>
                     <section>
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" minlength="2"/>
@@ -75,7 +75,7 @@
                     </section>
                 </fieldset>
                 <fieldset form="whoo_signup">
-                    <legend>Finally, enter your payment information</legend>
+                    <legend><span class="numbering">3</a>Finally, enter your payment information</legend>
                     <section>
                         <aside>Use PayPal</aside>
                         <label for="cc_number">Card Number</label>
@@ -112,7 +112,7 @@
                 </fieldset>
                 <button type="submit" name="send">Create your portfolio</button>
             </form>
-        </div>
+        </section>
         <?php
             }
         ?>

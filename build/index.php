@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Sign up for Whoo!</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 
 <body>

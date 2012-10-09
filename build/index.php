@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Sign up for Whoo!</title>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="assets/js/lib/jquery.validate.js"></script>
+    <script src="assets/js/lib/modernizr.js"></script>
 </head>
 
 <body>
@@ -11,7 +14,7 @@
         // if the form has been submitted, process it - otherwise, just display the form normally
         if(isset($_POST['send'])){
             
-            // pull the name out of the submitted for
+            // pull the name out of the submitted form
             $name = strip_tags($_POST['name']);
             
             // pull the email out of the submitted form

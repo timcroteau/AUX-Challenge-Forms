@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Sign up for Whoo!</title>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="assets/js/lib/jquery.validate.js"></script>
     <script src="assets/js/lib/modernizr.js"></script>

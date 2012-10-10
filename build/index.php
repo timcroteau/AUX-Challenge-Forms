@@ -52,7 +52,7 @@
         <section>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="whoo_signup">
                 <fieldset form="whoo_signup">
-                    <legend><span class="numbering">1</a> First, name your portfolio</legend>
+                    <legend><span class="numbering">1</span>First, name your portfolio</legend>
                     <section>
                         <label for="port_title">Portfolio Title</label>
                         <input type="text" id="port_title" name="port_title" minlength="2"/>
@@ -62,7 +62,7 @@
                     </section>
                 </fieldset>
                 <fieldset form="whoo_signup">
-                    <legend><span class="numbering">2</a>Now, enter your account details</legend>
+                    <legend><span class="numbering">2</span>Now, enter your account details</legend>
                     <section>
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" minlength="2"/>
@@ -76,9 +76,9 @@
                     </section>
                 </fieldset>
                 <fieldset form="whoo_signup">
-                    <legend><span class="numbering">3</a>Finally, enter your payment information</legend>
+                    <legend><span class="numbering">3</span>Finally, enter your payment information</legend>
                     <section>
-                        <aside>Use PayPal</aside>
+                        <aside><a href="#">Use PayPal</a></aside>
                         <label for="cc_number">Card Number</label>
                         <input type="text" id="cc_number" name="cc_number" minlength="2"/>
                         <div id="card_image"></div>

@@ -52,17 +52,90 @@ table {
 /* Begin site styles */
 
 
-body {background:#b3e3ff;}
+body {background:#b3e3ff;
+}
 
 h1, legend {font-family: 'Antic Slab', serif;}
+h2, label {font-family:Lucida Grande, Arial, Verdana, sans-serif;}
 
-h1 {color:#fff;}
+h1 {
+	color:#fff;
+	font-size:34px;
+	margin:29px 0 0 39px;}
 
-h2 {color:#b4e3ff;}
+h2 {
+	color:#b4e3ff;
+	font-size:12px;
+	margin:6px 0 0 39px;}
 
 label {
 	color:#715a5a;
-	font-family:Lucida Grande, Arial, Verdana, sans-serif;}
+	display:block;
+	font-size:12px;}
 
-legend {color:#234b61;}
+legend {
+	color:#234b61;
+	font-size:21px;}
 
+	legend > span.numbering {
+		background:#52a3d4;
+		border:6px solid #fff;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		color:#fff;
+		display:inline-block;
+		font-family: 'Antic Slab', serif;
+		font-weight:bold;
+		font-size:12px;
+		height:27px;
+		line-height:27px;
+		margin:0px 19px 0px -19px;
+		text-align:center;
+		width:27px;}
+
+aside {
+	color:#a2a2a2;
+	font-family:Lucida Grande, Arial, Verdana, sans-serif;
+	font-size:12px;}
+
+	aside a {
+		color:#72d0ff;
+		text-decoration:none;}
+
+		aside a:hover {text-decoration:underline;}
+
+#container {
+	margin:16px auto;
+	width:600px;}
+
+	#container > header {
+		background: #3c8ea6;
+		background: -moz-linear-gradient(top,  #3c8ea6 0%, #167893 2%, #125e77 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3c8ea6), color-stop(2%,#167893), color-stop(100%,#125e77));
+		background: -webkit-linear-gradient(top,  #3c8ea6 0%,#167893 2%,#125e77 100%);
+		background: -o-linear-gradient(top,  #3c8ea6 0%,#167893 2%,#125e77 100%);
+		background: -ms-linear-gradient(top,  #3c8ea6 0%,#167893 2%,#125e77 100%);
+		background: linear-gradient(to bottom,  #3c8ea6 0%,#167893 2%,#125e77 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c8ea6', endColorstr='#125e77',GradientType=0 );
+		border:1px solid #146c86;
+		-webkit-border-top-left-radius: 7px;
+		-webkit-border-top-right-radius: 7px;
+		-moz-border-radius-topleft: 7px;
+		-moz-border-radius-topright: 7px;
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
+		height:103px;}
+
+	#container section {
+		background:#fff;
+		-webkit-border-bottom-left-radius: 7px;
+		-webkit-border-bottom-right-radius: 7px;
+		-moz-border-radius-bottomleft: 7px;
+		-moz-border-radius-bottomright: 7px;
+		border-bottom-left-radius: 7px;
+		border-bottom-right-radius: 7px;}
+
+	fieldset {
+		margin-top:21px;
+	}

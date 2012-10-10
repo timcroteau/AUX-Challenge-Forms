@@ -1,56 +1,16 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* ------------- simple reset ------------- */
 
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+h1,h2,h3,h4,h5,h6 {font-weight:normal;}
+fieldset, legend
+ {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-h1,h2, h3,h4,h5,h6 {font-weight:normal;}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+	vertical-align: baseline;}
 
-/* Begin site styles */
-
+/* ------------- Begin site styles ------------- */
 
 body {background:#b3e3ff;
 }
@@ -61,7 +21,7 @@ h2, label {font-family:Lucida Grande, Arial, Verdana, sans-serif;}
 h1 {
 	color:#fff;
 	font-size:34px;
-	margin:29px 0 0 39px;}
+	margin:28px 0 0 39px;}
 
 h2 {
 	color:#b4e3ff;
@@ -71,39 +31,13 @@ h2 {
 label {
 	color:#715a5a;
 	display:block;
-	font-size:12px;}
-
-legend {
-	color:#234b61;
-	font-size:21px;}
-
-	legend > span.numbering {
-		background:#52a3d4;
-		border:6px solid #fff;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		border-radius: 20px;
-		color:#fff;
-		display:inline-block;
-		font-family: 'Antic Slab', serif;
-		font-weight:bold;
-		font-size:12px;
-		height:27px;
-		line-height:27px;
-		margin:0px 19px 0px -19px;
-		text-align:center;
-		width:27px;}
+	font-size:11px;
+	margin-bottom:9px;}
 
 aside {
 	color:#a2a2a2;
 	font-family:Lucida Grande, Arial, Verdana, sans-serif;
 	font-size:12px;}
-
-	aside a {
-		color:#72d0ff;
-		text-decoration:none;}
-
-		aside a:hover {text-decoration:underline;}
 
 #container {
 	margin:16px auto;
@@ -125,6 +59,7 @@ aside {
 		-moz-border-radius-topright: 7px;
 		border-top-left-radius: 7px;
 		border-top-right-radius: 7px;
+		display:block;
 		height:103px;}
 
 	#container section {
@@ -136,6 +71,89 @@ aside {
 		border-bottom-left-radius: 7px;
 		border-bottom-right-radius: 7px;}
 
-	fieldset {
-		margin-top:21px;
-	}
+fieldset {}
+
+	legend {
+		color:#234b61;
+		display:block;
+		font-size:21px;
+		padding-top:23px;}
+
+
+		legend:before {
+			background:#52a3d4;
+			border:6px solid #fff;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+			color:#fff;
+			display:inline-block;
+			font-family: 'Antic Slab', serif;
+			font-weight:bold;
+			font-size:12px;
+			height:27px;
+			line-height:27px;
+			margin:0px 19px 0px -19px;
+			position:relative;
+			top:-4px;
+			text-align:center;
+			width:27px;}
+
+			legend#one:before{content:"1";}
+			legend#two:before{content:"2";}
+			legend#three:before{content:"3";}
+
+	fieldset div {
+		background:#f3f5f5;
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+		border-radius: 7px;
+		margin:0 40px 10px 40px;
+		padding:32px 40px 17px 40px;}
+
+	input[type="text"] {
+		background:#fff;
+		border:0px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		-moz-box-shadow: inset 0 1px 2px 0px #cbcbcb;
+		-webkit-box-shadow: inset 0 1px 2px 0px #cbcbcb;
+		box-shadow: inset 0 1px 2px 0px #cbcbcb;
+		height:32px;
+		margin-bottom:22px;
+		padding:0px 7px;
+		width:426px;}
+
+		input[type="text"]#cc_number {width:226px;}
+		input[type="text"]#sec_code {width:66px;}
+
+	select {
+		background: #ffffff;
+		background: -moz-linear-gradient(top,  #ffffff 0%, #e9eded 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e9eded));
+		background: -webkit-linear-gradient(top,  #ffffff 0%,#e9eded 100%);
+		background: -o-linear-gradient(top,  #ffffff 0%,#e9eded 100%);
+		background: -ms-linear-gradient(top,  #ffffff 0%,#e9eded 100%);
+		background: linear-gradient(to bottom,  #ffffff 0%,#e9eded 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9eded',GradientType=0 );
+		border:1px solid #d5d7d7;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		height:23px;
+		padding-left:7px;
+		-webkit-appearance: none;}
+
+		select#month {width:114px;}
+		select#year {width:56px;}
+
+	input:focus, select:focus {outline: none;}
+
+	label.disclosure {
+		color:#a2a2a2;
+		margin-bottom:12px;
+		position:relative;
+		top:-15px;}
+
+#card_image, #sec_image {border:1px solid black;float:right;}

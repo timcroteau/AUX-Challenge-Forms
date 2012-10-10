@@ -7,7 +7,7 @@
     <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="assets/js/lib/jquery.validate.js"></script>
-    <script src="assets/js/lib/modernizr.js"></script>
+    <script src="assets/js/lib/modernizr.custom.13740.js"></script>
 </head>
 
 <body>
@@ -52,42 +52,41 @@
         <section>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="whoo_signup">
                 <fieldset form="whoo_signup">
-                    <legend><span class="numbering">1</span>First, name your portfolio</legend>
-                    <section>
-                        <label for="port_title">Portfolio Title</label>
+                    <legend id="one">First, name your portfolio</legend>
+                    <div>
+                        <label for="port_title">Portfolio title</label>
                         <input type="text" id="port_title" name="port_title" minlength="2"/>
 
-                        <label for="port_address">Portfolio Address</label>
-                        <input type="email" id="port_address" name="port_address" minlength="2"/>
-                    </section>
+                        <label for="port_address">Portfolio address</label>
+                        <input type="text" id="port_address" name="port_address" minlength="2"/>
+                    </div>
                 </fieldset>
                 <fieldset form="whoo_signup">
-                    <legend><span class="numbering">2</span>Now, enter your account details</legend>
-                    <section>
+                    <legend id="two">Now, enter your account details</legend>
+                    <div>
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" minlength="2"/>
 
                         <label for="port_title">Email</label>
                         <input type="text" id="email" name="email" minlength="2"/>
-                        <aside>NOTE: We'll never share your email, promise.</aside>
+                        <label class="disclosure">NOTE: We'll never share your email, promise.</label>
 
                         <label for="port_title">Password</label>
                         <input type="text" id="password" name="password" minlength="2"/>
-                    </section>
+                    </div>
                 </fieldset>
                 <fieldset form="whoo_signup">
-                    <legend><span class="numbering">3</span>Finally, enter your payment information</legend>
-                    <section>
-                        <aside><a href="#">Use PayPal</a></aside>
-                        <label for="cc_number">Card Number</label>
+                    <legend id="three">Finally, enter your payment information</legend>
+                    <div>
+                        <label for="cc_number">Card number</label>
                         <input type="text" id="cc_number" name="cc_number" minlength="2"/>
                         <div id="card_image"></div>
                         
-                        <label for="sec_code">Security Code</label>
+                        <label for="sec_code">Security code</label>
                         <input type="text" id="sec_code" name="sec_code" minlength="2"/>
                         <div id="sec_image"></div>
 
-                        <label for="month">Expiration Date</label>
+                        <label for="month">Expiration date</label>
                         <select id="month" name="month">
                             <option>January</option>
                             <option>February</option>
@@ -109,7 +108,7 @@
                                 }
                             ?>
                         </select>
-                    </section>
+                    </div>
                 </fieldset>
                 <button type="submit" name="send">Create your portfolio</button>
             </form>

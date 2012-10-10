@@ -12,11 +12,14 @@ fieldset, legend
 
 /* ------------- Begin site styles ------------- */
 
-body {background:#b3e3ff;
-}
+body {
+	background:#b3e3ff;
+	color:#715a5a;
+	font-family:'Lucida Grande', Arial, Verdana, sans-serif;
+	padding:16px;}
 
 h1, legend {font-family: 'Antic Slab', serif;}
-h2, label {font-family:Lucida Grande, Arial, Verdana, sans-serif;}
+h2, label {font-family:'Lucida Grande', Arial, Verdana, sans-serif;}
 
 h1 {
 	color:#fff;
@@ -36,11 +39,11 @@ label {
 
 aside {
 	color:#a2a2a2;
-	font-family:Lucida Grande, Arial, Verdana, sans-serif;
+	font-family:'Lucida Grande', Arial, Verdana, sans-serif;
 	font-size:12px;}
 
 #container {
-	margin:16px auto;
+	margin:0px auto 0px auto;
 	width:600px;}
 
 	#container > header {
@@ -69,7 +72,8 @@ aside {
 		-moz-border-radius-bottomleft: 7px;
 		-moz-border-radius-bottomright: 7px;
 		border-bottom-left-radius: 7px;
-		border-bottom-right-radius: 7px;}
+		border-bottom-right-radius: 7px;
+		padding-bottom:40px;}
 
 fieldset {}
 
@@ -90,7 +94,7 @@ fieldset {}
 			display:inline-block;
 			font-family: 'Antic Slab', serif;
 			font-weight:bold;
-			font-size:12px;
+			font-size:13px;
 			height:27px;
 			line-height:27px;
 			margin:0px 19px 0px -19px;
@@ -99,9 +103,9 @@ fieldset {}
 			text-align:center;
 			width:27px;}
 
-			legend#one:before{content:"1";}
-			legend#two:before{content:"2";}
-			legend#three:before{content:"3";}
+			legend#one:before {content:"1";}
+			legend#two:before {content:"2";}
+			legend#three:before {content:"3";}
 
 	fieldset div {
 		background:#f3f5f5;
@@ -111,7 +115,7 @@ fieldset {}
 		margin:0 40px 10px 40px;
 		padding:32px 40px 17px 40px;}
 
-	input[type="text"] {
+	input[type="text"], input[type="email"] {
 		background:#fff;
 		border:0px;
 		-webkit-border-radius: 4px;
@@ -129,26 +133,12 @@ fieldset {}
 		input[type="text"]#sec_code {width:66px;}
 
 	select {
-		background: #ffffff;
-		background: -moz-linear-gradient(top,  #ffffff 0%, #e9eded 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e9eded));
-		background: -webkit-linear-gradient(top,  #ffffff 0%,#e9eded 100%);
-		background: -o-linear-gradient(top,  #ffffff 0%,#e9eded 100%);
-		background: -ms-linear-gradient(top,  #ffffff 0%,#e9eded 100%);
-		background: linear-gradient(to bottom,  #ffffff 0%,#e9eded 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9eded',GradientType=0 );
-		border:1px solid #d5d7d7;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
 		height:23px;
 		padding-left:7px;
-		-webkit-appearance: none;}
+		margin-bottom:22px;}
 
 		select#month {width:114px;}
-		select#year {width:56px;}
-
-	input:focus, select:focus {outline: none;}
+		select#year {width:60px;}
 
 	label.disclosure {
 		color:#a2a2a2;
@@ -156,4 +146,48 @@ fieldset {}
 		position:relative;
 		top:-15px;}
 
-#card_image, #sec_image {border:1px solid black;float:right;}
+	#card_image, #sec_image {border:1px solid black;float:right;}
+
+	button {
+		background: #aabd62;
+		background: -moz-linear-gradient(top,  #aabd62 0%, #90a933 3%, #7b992b 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aabd62), color-stop(3%,#90a933), color-stop(100%,#7b992b));
+		background: -webkit-linear-gradient(top,  #aabd62 0%,#90a933 3%,#7b992b 100%);
+		background: -o-linear-gradient(top,  #aabd62 0%,#90a933 3%,#7b992b 100%);
+		background: -ms-linear-gradient(top,  #aabd62 0%,#90a933 3%,#7b992b 100%);
+		background: linear-gradient(to bottom,  #aabd62 0%,#90a933 3%,#7b992b 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aabd62', endColorstr='#7b992b',GradientType=0 );
+		border:1px solid #7b992b;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		color:#fff;
+		cursor: pointer;
+		display:block;
+		font-family: 'Antic Slab', serif;
+		font-size:18px;
+		font-weight:normal;
+		height:35px;
+		margin:17px auto 0 auto;
+		width:216px;}
+
+		button:hover {
+			background: #93a354;
+			background: -moz-linear-gradient(top,  #93a354 0%, #7b8e2c 3%, #687f24 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#93a354), color-stop(3%,#7b8e2c), color-stop(100%,#687f24));
+			background: -webkit-linear-gradient(top,  #93a354 0%,#7b8e2c 3%,#687f24 100%);
+			background: -o-linear-gradient(top,  #93a354 0%,#7b8e2c 3%,#687f24 100%);
+			background: -ms-linear-gradient(top,  #93a354 0%,#7b8e2c 3%,#687f24 100%);
+			background: linear-gradient(to bottom,  #93a354 0%,#7b8e2c 3%,#687f24 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93a354', endColorstr='#687f24',GradientType=0 );}
+
+		button:active {
+			background: #687f24;
+			background: -moz-linear-gradient(top,  #687f24 0%, #7b8e2c 97%, #93a354 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#687f24), color-stop(97%,#7b8e2c), color-stop(100%,#93a354));
+			background: -webkit-linear-gradient(top,  #687f24 0%,#7b8e2c 97%,#93a354 100%);
+			background: -o-linear-gradient(top,  #687f24 0%,#7b8e2c 97%,#93a354 100%);
+			background: -ms-linear-gradient(top,  #687f24 0%,#7b8e2c 97%,#93a354 100%);
+			background: linear-gradient(to bottom,  #687f24 0%,#7b8e2c 97%,#93a354 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#687f24', endColorstr='#93a354',GradientType=0 );
+			margin:18px auto -1px auto;}

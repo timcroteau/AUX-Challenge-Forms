@@ -189,7 +189,13 @@ fieldset {}
 
 	#card_image_bg {z-index:2;}
 
-	#card_image label {z-index:2000;display:inline-block;height:32px;overflow:hidden;position:relative;width:45px;}
+	#card_image label {
+		display:inline-block;
+		height:32px;
+		overflow:hidden;
+		position:relative;
+		width:44px;
+		z-index:2000;}
 
 	#card_image input[id="amex"]:checked ~ #card_image_bg {background-position:0 -164px;}
 	#card_image input[id="visa"]:checked ~ #card_image_bg {background-position:0 -206px;}

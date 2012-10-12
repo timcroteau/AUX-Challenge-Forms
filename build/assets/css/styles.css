@@ -180,7 +180,7 @@ fieldset {}
 
 	#card_image {
 		position:relative;
-	}
+		top:-53px;}
 
 	#card_image_bg {
 		background:url(../images/sprite.png) 0 -122px no-repeat;
@@ -191,10 +191,13 @@ fieldset {}
 
 	#card_image label {
 		display:inline-block;
+		float:left;
 		height:32px;
 		overflow:hidden;
+		padding-left:2px;
 		position:relative;
-		width:44px;
+		opacity:0;
+		width:45px;
 		z-index:2000;}
 
 	#card_image input[id="amex"]:checked ~ #card_image_bg {background-position:0 -164px;}

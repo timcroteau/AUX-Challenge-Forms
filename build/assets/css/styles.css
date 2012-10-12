@@ -1,7 +1,12 @@
-/* ------------- simple reset ------------- */
+@import url(http://fonts.googleapis.com/css?family=Antic+Slab);
+
+/* ------------- simple reset (featuring Tim's Boilerplate Lite) ------------- */
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+img { -ms-interpolation-mode: bicubic; }
 
 h1,h2,h3,h4,h5,h6 {font-weight:normal;}
-fieldset, legend
+fieldset, legend, label, input
  {
 	margin: 0;
 	padding: 0;
@@ -9,6 +14,27 @@ fieldset, legend
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
+
+
+.visuallyhidden {
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px; }
+
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+	clip: auto; 
+	height: auto; 
+	margin: 0; 
+	overflow: visible; 
+	position: static; 
+	width: auto; }
+
 
 /* ------------- Begin site styles ------------- */
 
@@ -107,7 +133,7 @@ fieldset {}
 			legend#two:before {content:"2";}
 			legend#three:before {content:"3";}
 
-	fieldset div {
+	fieldset > div {
 		background:#f3f5f5;
 		-webkit-border-radius: 7px;
 		-moz-border-radius: 7px;
@@ -115,7 +141,7 @@ fieldset {}
 		margin:0 40px 10px 40px;
 		padding:32px 40px 17px 40px;}
 
-	input[type="text"], input[type="email"] {
+	input[type="text"], input[type="email"], input[type="password"] {
 		background:#fff;
 		border:0px;
 		-webkit-border-radius: 4px;
@@ -146,7 +172,29 @@ fieldset {}
 		position:relative;
 		top:-15px;}
 
-	#card_image, #sec_image {border:1px solid black;float:right;}
+	#card_image, #sec_image {float:right;margin-right:-3px;}
+
+	#card_image, #card_image_bg {
+		height:32px;
+		width:189px;}
+
+	#card_image {
+		position:relative;
+	}
+
+	#card_image_bg {
+		background:url(../images/sprite.png) 0 -122px no-repeat;
+		display:block;
+		position:absolute;}
+
+	#card_image_bg {z-index:2;}
+
+	#card_image label {z-index:2000;display:inline-block;height:32px;overflow:hidden;position:relative;width:45px;}
+
+	#card_image input[id="amex"]:checked ~ #card_image_bg {background-position:0 -164px;}
+	#card_image input[id="visa"]:checked ~ #card_image_bg {background-position:0 -206px;}
+	#card_image input[id="discover"]:checked ~ #card_image_bg {background-position:0 -248px;}
+	#card_image input[id="mastercard"]:checked ~ #card_image_bg {background-position:0 -290px;}	
 
 	button {
 		background: #aabd62;

@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
     <meta charset="utf-8">
     <title>Sign up for Whoo!</title>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="assets/js/lib/jquery.validate.js"></script>
     <script src="assets/js/lib/modernizr.custom.13740.js"></script>
 </head>
 
@@ -17,15 +14,9 @@
             
             // pull submitted info out of the form
             $port_title = strip_tags($_POST['port_title']);            
-            
             $port_address = strip_tags($_POST['port_address']);
             $name = strip_tags($_POST['name']);
             $emailFrom = strip_tags($_POST['email']);
-            $password = strip_tags($_POST['password']);
-            $cc_number = strip_tags($_POST['cc_number']);
-            $sec_code = strip_tags($_POST['sec_code']);
-            $month = strip_tags($_POST['month']);
-            $year = strip_tags($_POST['year']);
             
             // who you're sending the email to (probably change this)
             $emailTo = "tim.croteau@freshtilledsoil.com";
@@ -80,7 +71,7 @@
                         <label class="disclosure">NOTE: We'll never share your email, promise.</label>
 
                         <label for="port_title">Password</label>
-                        <input type="text" id="password" name="password" minlength="2" required/>
+                        <input type="password" id="password" name="password" minlength="2" required/>
                     </div>
                 </fieldset>
                 <fieldset form="whoo_signup">
@@ -88,7 +79,13 @@
                     <div>
                         <label for="cc_number">Card number</label>
                         <input type="text" id="cc_number" name="cc_number" minlength="2" required/>
-                        <div id="card_image"></div>
+                        <div id="card_image">
+                            <input type="radio" id="amex" name="card_type" value="amex" class="visuallyhidden" /><label for="amex">American Express</label>
+                            <input type="radio" id="visa" name="card_type" value="visa" class="visuallyhidden" /><label for="visa">Visa</label>
+                            <input type="radio" id="discover" name="card_type" value="discover" class="visuallyhidden" /><label for="discover">Discover</label>
+                            <input type="radio" id="mastercard" name="card_type" value="mastercard" class="visuallyhidden" /><label for="mastercard">Mastercard</label>
+                            <div id="card_image_bg"></div>
+                        </div>
                         
                         <label for="sec_code">Security code</label>
                         <input type="text" id="sec_code" name="sec_code" minlength="2" required/>
@@ -96,7 +93,7 @@
 
                         <label for="month">Expiration date</label>
                         <select id="month" name="month" required>
-                            <option value="">---</option>
+                            <option value="">Month...</option>
                             <option value="Jan">January</option>
                             <option value="Feb">February</option>
                             <option value="Mar">March</option>
@@ -111,7 +108,7 @@
                             <option value="Dec">December</option>
                         </select>
                         <select id="year" name="year" required>
-                            <option value="">---</option>
+                            <option value="">Year...</option>
                             <?php 
                                 for ($i = date("Y");$i <= (date("Y") + 5);$i++) {  
                                     echo '<option value="'.$i.'">'.$i.'</option>';
@@ -127,6 +124,6 @@
             }
         ?>
     </div>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

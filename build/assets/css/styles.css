@@ -148,6 +148,11 @@ fieldset {}
 		input[type="text"]#cc_number {width: 226px;}
 		input[type="text"]#sec_code {width: 66px;}
 
+		input::-webkit-validation-bubble-message {
+    		clip: auto;
+    		height:auto;
+    		width:auto;}
+
 	select {
 		height:23px;
 		padding: 0 0 0 7px;
@@ -166,36 +171,31 @@ fieldset {}
 		float: right;
 		margin: 0 -3px 0 0;}
 
-	#card_image, #card_image_bg {
-		height: 32px;
-		width: 189px;}
-
 	#card_image {
-		position: relative;
-		top: -53px;}
+		height: 32px;
+		position: relative;}
 
-	#card_image_bg {
-		background: url(../images/sprite.png) 0 -122px no-repeat;
+	#card_image label, #card_image label span  {
 		display: block;
-		position: absolute;}
-
-	#card_image_bg {z-index:2;}
+		height: 32px;
+		width: 45px;}
 
 	#card_image label {
-		display: inline-block;
+		background: url(../images/sprite.png) 0 -122px no-repeat;
 		float: left;
-		height: 32px;
-		overflow: hidden;
-		padding: 0 0 0 2px;
-		position: relative;
-		opacity: 0;
-		width: 45px;
-		z-index: 2000;}
+		padding: 0 0 0 3px;}
 
-	#card_image input[id="amex"]:checked ~ #card_image_bg {background-position: 0 -164px;}
-	#card_image input[id="visa"]:checked ~ #card_image_bg {background-position: 0 -206px;}
-	#card_image input[id="discover"]:checked ~ #card_image_bg {background-position: 0 -248px;}
-	#card_image input[id="mastercard"]:checked ~ #card_image_bg {background-position: 0 -290px;}	
+		#card_image label span {display:block; opacity: 0; cursor: pointer;}
+
+	#card_image label[for="amex"] {background-position: 0 -122px; opacity: 0.5;}
+	#card_image label[for="visa"] {background-position: -48px -122px; opacity: 0.5;}
+	#card_image label[for="discover"] {background-position: -96px -122px; opacity: 0.5;}
+	#card_image label[for="mastercard"] {background-position: -144px -122px; opacity: 0.5;}
+
+	#card_image input#amex:checked + label {opacity: 1;}
+	#card_image input#visa:checked + label {opacity: 1;}
+	#card_image input#discover:checked + label {opacity: 1;}
+	#card_image input#mastercard:checked + label {opacity: 1;}
 
 	button {
 		background: #aabd62;

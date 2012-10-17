@@ -8,7 +8,16 @@
 </head>
 
 <body>
-    <?php
+    
+    <div id="container">
+        <header role="banner">
+            <hgroup>
+                <h1>Sign up for Whoo!</h1>
+                <h2>50 projects, 500 images, 10 videos, domain binding, and technical support</h2>
+            </hgroup>
+        </header>
+        <section>
+        <?php
         // if the form has been submitted, process it - otherwise, just display the form normally
         if(isset($_POST['send'])){
             
@@ -43,37 +52,29 @@
         
         } else {
     ?>
-    <div id="container">
-        <header role="banner">
-            <hgroup>
-                <h1>Sign up for Whoo!</h1>
-                <h2>50 projects, 500 images, 10 videos, domain binding, and technical support</h2>
-            </hgroup>
-        </header>
-        <section>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="whoo_signup">
                 <fieldset form="whoo_signup">
                     <legend id="one">First, name your portfolio</legend>
                     <div>
                         <label for="port_title">Portfolio title</label>
-                        <input type="text" id="port_title" name="port_title" required/>
+                        <input type="text" id="port_title" name="port_title" pattern="^[\w\d\_\- ]{3,}" title="Must be at least 3 characters, and may include letters, numbers, underscores and hyphens" required/>
 
                         <label for="port_address">Portfolio address</label>
-                        <input type="text" id="port_address" name="port_address" required/>
+                        <input type="text" id="port_address" name="port_address" pattern="^[\w\d\_\-]{3,}" title="Must be at least 3 characters, and may include letters, numbers, underscores and hyphens" required/>
                     </div>
                 </fieldset>
                 <fieldset form="whoo_signup">
                     <legend id="two">Now, enter your account details</legend>
                     <div>
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required/>
+                        <input type="text" id="name" name="name" pattern="^[\w\d\'\- ]{3,}$" title="Must include at least 2 characters" required/>
 
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required/>
                         <label class="disclosure">NOTE: We'll never share your email, promise.</label>
 
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required/>
+                        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must be at least eight characters long, including at least one number, one lowercase, and one uppercase letter" type="text" required/>
                     </div>
                 </fieldset>
                 <fieldset form="whoo_signup">
@@ -82,10 +83,10 @@
                         <label for="cc_number">Card number</label>
                         <input type="text" id="cc_number" name="cc_number" required/>
                         <div id="card_image">
-                            <input type="radio" id="amex" name="card_type" value="amex" class="visuallyhidden" /><label for="amex">American Express</label>
-                            <input type="radio" id="visa" name="card_type" value="visa" class="visuallyhidden" /><label for="visa">Visa</label>
-                            <input type="radio" id="discover" name="card_type" value="discover" class="visuallyhidden" /><label for="discover">Discover</label>
-                            <input type="radio" id="mastercard" name="card_type" value="mastercard" class="visuallyhidden" /><label for="mastercard">Mastercard</label>
+                            <input type="radio" id="amex" name="card_type" value="amex" class="visuallyhidden" /><label for="amex"><span>American Express</span></label>
+                            <input type="radio" id="visa" name="card_type" value="visa" class="visuallyhidden" /><label for="visa"><span>Visa</span></label>
+                            <input type="radio" id="discover" name="card_type" value="discover" class="visuallyhidden" /><label for="discover"><span>Discover</span></label>
+                            <input type="radio" id="mastercard" name="card_type" value="mastercard" class="visuallyhidden" /><label for="mastercard"><span>Mastercard</span></label>
                         </div>
                         
                         <label for="sec_code">Security code</label>
@@ -120,10 +121,11 @@
                 </fieldset>
                 <button type="submit" name="send">Create your portfolio</button>
             </form>
-        </section>
+        
         <?php
             }
         ?>
+        </section>
     </div>
     <script src="assets/js/script.js"></script>
 </body>

@@ -43,6 +43,7 @@ fieldset, legend, label, input
 
 .alpha30 {opacity: 0.3;}
 .alpha50 {opacity: 0.5;}
+.full-alpha {opacity: 1;}
 .killit {display: none;}
 .hideit {
 	position: absolute;
@@ -148,11 +149,6 @@ fieldset {}
 		input[type="text"]#cc_number {width: 226px;}
 		input[type="text"]#sec_code {width: 66px;}
 
-		input::-webkit-validation-bubble-message {
-    		clip: auto;
-    		height:auto;
-    		width:auto;}
-
 	select {
 		height:23px;
 		padding: 0 0 0 7px;
@@ -185,7 +181,9 @@ fieldset {}
 		float: left;
 		padding: 0 0 0 3px;}
 
-		#card_image label span {display:block; opacity: 0; cursor: pointer;}
+		#card_image label span {
+			display: block;
+			opacity:0;}
 
 	#card_image label[for="amex"] {background-position: 0 -122px; opacity: 0.5;}
 	#card_image label[for="visa"] {background-position: -48px -122px; opacity: 0.5;}
@@ -208,7 +206,6 @@ fieldset {}
 		border: 1px solid #7b992b;
 		border-radius: 4px;
 		color: #fff;
-		cursor: pointer;
 		display: block;
 		font: 18px 'Antic Slab', serif;
 		height: 35px;

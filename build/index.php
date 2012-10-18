@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Sign up for Whoo!</title>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <script src="assets/js/lib/modernizr.custom.13740.js"></script>
+    <script src="assets/js/lib/modernizr.js"></script>
+    <!-- custom.13740. -->
 </head>
 
 <body>
@@ -81,7 +82,7 @@
                     <legend id="three">Finally, enter your payment information</legend>
                     <div>
                         <label for="cc_number">Card number</label>
-                        <input type="text" id="cc_number" name="cc_number" required/>
+                        <input type="text" id="cc_number" name="cc_number" pattern="[0-9]{13,16}" title="Must be between 13 and 16 characters" required/>
                         <div id="card_image">
                             <input type="radio" id="amex" name="card_type" value="amex" class="visuallyhidden" /><label for="amex"><span>American Express</span></label>
                             <input type="radio" id="visa" name="card_type" value="visa" class="visuallyhidden" /><label for="visa"><span>Visa</span></label>

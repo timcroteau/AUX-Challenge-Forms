@@ -76,6 +76,21 @@ label {
 	font-size: 11px;
 	margin: 0 0 9px 0;}
 
+	label.error {
+		background: #ff8080;
+		border:2px solid #cc3d3d;
+		border-radius:4px;
+		color:#fff;
+		padding:8px;
+		position:relative;
+		top: -20px;
+		width: 422px;}
+
+		label[for="month"].error, label[for="year"].error {
+			display:block;
+			top: 0;
+			width: 120px;}
+
 aside {
 	color: #a2a2a2;
 	font-size: 12px;}

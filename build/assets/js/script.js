@@ -93,11 +93,11 @@ Modernizr.load([
   // Load in jQuery and validation library if HTML5 validation is unavailable
   {
     test: Modernizr.input.required,
-    yep: ['//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js','assets/js/lib/jquery.validate.js'],
+    nope: ['//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js','assets/js/lib/jquery.validate.js'],
     complete: function(){
       jQuery(document).ready(function($){
         if(Modernizr.input.required){
-          $("#whoo_form").validate();
+          $("#whoo_signup").validate();
           $("input[required='required']").addClass("required");
         }
       })

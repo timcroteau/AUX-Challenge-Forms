@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>Sign up for Whoo!</title>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <script src="assets/js/lib/modernizr.js"></script>
-    <!-- custom.13740. -->
+    <script src="assets/js/lib/modernizr.custom.03443.js"></script>
 </head>
 
 <body>
